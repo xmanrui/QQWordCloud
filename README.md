@@ -1,4 +1,4 @@
-# QQWordCould
+# QQWordCloud
 用Python分析QQ聊天记录
 
 ## 需要安装
