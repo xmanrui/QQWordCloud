@@ -52,7 +52,7 @@ def main():
     jieba.load_userdict(add_words_path)
     seg = jieba.cut(messages, cut_all=False, HMM=True)
     seg = [s.title() for s in seg]
-    seg = [i for i in seg if (len(i) > 1) and i not in stopwords]
+    seg = [i for i in seg if i not in stopwords]
     print(seg)
     set_show_chinese()
     text = ' '.join(seg)
