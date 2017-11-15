@@ -1,5 +1,5 @@
 # QQWordCloud
-用Python分析QQ聊天记录
+用Python分析QQ聊天记录并绘制词云图
 
 ## 需要安装
 * pip install matplotlib
