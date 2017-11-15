@@ -64,7 +64,7 @@ def main():
     plt.title('C/C++ Loft聊天词云图', fontsize=20)
     plt.axis("off")
     plt.show()
-    wc.to_file('./images.png')
+    wc.to_file('./wordcloud.png')
 
 if __name__ == '__main__':
     main()
