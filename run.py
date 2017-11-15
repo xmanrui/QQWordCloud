@@ -50,6 +50,7 @@ def main():
 
     print(messages)
     jieba.load_userdict(add_words_path)
+    jieba.add_word
     seg = jieba.cut(messages, cut_all=False, HMM=True)
     seg = [s.title() for s in seg]
     seg = [i for i in seg if (len(i) > 1) and i not in stopwords]
