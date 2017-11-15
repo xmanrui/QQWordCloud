@@ -6,4 +6,10 @@
 * pip install wordcloud
 * pip install jieba
 
-## CC++ Loft.txt为QQ群聊天记录
+## PS
+CC++ Loft.txt为QQ群聊天记录
+
+## 效果<br>
+<div align=center><img src="wordcloud.png" width = "50%" /></div><br>
+
+
