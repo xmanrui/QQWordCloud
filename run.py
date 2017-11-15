@@ -7,7 +7,8 @@ import jieba
 
 log_path = './CC++ Loft.txt'
 font = './font/SourceHanSerifSC-Regular.otf'
-stop_words_path = 'stop_words.txt'
+stop_words_path = './stop_words.txt'
+add_words_path = './add_words.txt'
 
 
 def set_show_chinese():
@@ -48,10 +49,7 @@ def main():
             messages += i[1]
 
     print(messages)
-    jieba.add_word('D神')
-    jieba.add_word('大吊')
-    jieba.add_word('鸡哥')
-    jieba.add_word('风逼')
+    jieba.load_userdict(add_words_path)
     seg = jieba.cut(messages, cut_all=False, HMM=True)
     seg = [s.title() for s in seg]
     seg = [i for i in seg if (len(i) > 1) and i not in stopwords]
