@@ -10,6 +10,6 @@
 CC++ Loft.txt为QQ群聊天记录
 
 ## 效果<br>
-<div align=center><img src="images/wordcloud.png" width = "50%" /></div><br>
+<div align=center><img src="images/wordcloud.png" width = "80%" /></div><br>
 
 
