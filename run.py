@@ -56,7 +56,7 @@ def stop_words_list(file_path):
     return set(stopwords)
 
 
-def main():
+def draw_all_wordcloud():
     stopwords = stop_words_list(stop_words_path)
 
     with open(log_path, 'r', encoding='utf8') as fh:
@@ -92,4 +92,4 @@ def main():
     wc.to_file('./wordcloud.png')
 
 if __name__ == '__main__':
-    main()
+    draw_all_wordcloud()
