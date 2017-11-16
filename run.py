@@ -17,6 +17,25 @@ def set_show_chinese():
     mpl.rcParams['axes.unicode_minus'] = False  # 解决保存图像是负号'-'显示为方块的问题
 
 
+def convert_name(name):
+    if name == '基哥' or name == '斯基':
+        converted_name = '司机'
+    elif name == '光光':
+        converted_name = '逆光'
+    elif name == '大吊':
+        converted_name = '大屌'
+    elif name == 'D老师':
+        converted_name = 'D神'
+    elif name == '风' or name == '风比' or name == '风b' or name == '风B':
+        converted_name = '风逼'
+    elif name == '浩子':
+        converted_name = '浩总'
+    else:
+        converted_name = name
+
+    return converted_name
+
+
 def check_contain_chinese(check_str):
     for ch in check_str:
         if u'\u4e00' <= ch <= u'\u9fff':
@@ -53,7 +72,7 @@ def main():
     seg = jieba.cut(messages, cut_all=False, HMM=True)
     seg = [s.title() for s in seg]
     seg = [i for i in seg if i not in stopwords]
-    print(seg)
+    seg = [convert_name(i) for i in seg]
     set_show_chinese()
     text = ' '.join(seg)
 
