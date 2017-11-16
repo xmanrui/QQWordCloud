@@ -30,6 +30,14 @@ def convert_name(name):
         converted_name = '风逼'
     elif name == '浩子':
         converted_name = '浩总'
+    elif name == '炫彩' or name == '绚彩锅' or name == '炫彩哥' or name == '绚彩哥':
+        converted_name = '绚彩'
+    elif name == '新手锅' or name == '新手':
+        converted_name = '新手哥'
+    elif name == '贝贝姐':
+        converted_name = '贝贝'
+    elif name == '昔年' or name == '群主':
+        converted_name = '大湿'
     else:
         converted_name = name
 
@@ -53,7 +61,7 @@ def main():
 
     with open(log_path, 'r', encoding='utf8') as fh:
         all_text = fh.read()
-        pattern = '(2017-01-01[\\s\\S]+)'  # 为了提高运行效率，只分析2017-01-01以后的信息
+        pattern = '(2015-08-16[\\s\\S]+)'  # 为了提高运行效率，只分析2017-01-01以后的信息
         p = re.compile(pattern, re.M)
         r = p.findall(all_text)
         valid_text = r[0]
